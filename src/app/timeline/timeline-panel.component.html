@@ -1,0 +1,39 @@
+<div class="panel-root">
+  <div class="panel-header">
+    <h3>{{ mode === 'create' ? 'Create Work Order' : 'Work Order Details' }}</h3>
+    <button class="close" (click)="onCancel()">✕</button>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSave()" class="panel-form">
+    <label>Work Order Name</label>
+    <input formControlName="name" />
+
+    <label>Status</label>
+    <!-- ng-select integration -->
+    <ng-select [items]="['open','in-progress','complete','blocked']"
+               bindLabel=""
+               bindValue=""
+               formControlName="status">
+      <ng-template ng-option-tmp let-item="item">{{ item }}</ng-template>
+    </ng-select>
+
+    <label>Start Date</label>
+    <!-- ngbDatepicker input -->
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd" formControlName="startDate" ngbDatepicker #s="ngbDatepicker" (dateSelect)="onDateSelect($event,'startDate')">
+      <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">📅</button>
+    </div>
+
+    <label>End Date</label>
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd" formControlName="endDate" ngbDatepicker #e="ngbDatepicker" (dateSelect)="onDateSelect($event,'endDate')">
+      <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button">📅</button>
+    </div>
+
+    <div class="panel-actions">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit">{{ mode === 'create' ? 'Create' : 'Save' }}</button>
+      <button *ngIf="mode === 'edit'" type="button" class="danger" (click)="onDelete()">Delete</button>
+    </div>
+  </form>
+</div>

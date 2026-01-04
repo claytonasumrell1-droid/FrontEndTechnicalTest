@@ -1,0 +1,14 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["ES2020", "DOM"]
+  }
+}

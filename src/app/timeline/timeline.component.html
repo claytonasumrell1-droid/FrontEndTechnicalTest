@@ -1,0 +1,45 @@
+<div class="timeline-root">
+  <div class="left-panel">
+    <div class="header">Work Center</div>
+    <ul>
+      <li *ngFor="let c of workCenters">{{ c.data.name }}</li>
+    </ul>
+  </div>
+
+  <div class="right-panel" #rightPanel>
+    <div class="timescale-controls">
+      <label>Timescale:</label>
+      <select (change)="setTimescale($any($event.target).value)">
+        <option value="day" selected>Day</option>
+        <option value="week">Week</option>
+        <option value="month">Month</option>
+      </select>
+    </div>
+    <div class="grid" [style.height.px]="workCenters.length * 56">
+      <div class="grid-inner" #gridInner [style.width.px]="gridWidth">
+        <!-- current day indicator -->
+        <div class="day-indicator" [style.left.px]="todayLeft"></div>
+
+        <div *ngFor="let c of workCenters; let i = index" class="row" [style.top.px]="i * 56">
+          <div class="row-inner" (click)="openCreate(c.docId)">
+            <div class="bars" style="position:relative; height:48px;">
+                  <div *ngFor="let o of getOrdersForCenter(c.docId)"
+                   class="order-bar"
+                   [ngClass]="statusClass(o)"
+                   [style.left.px]="leftFor(o)"
+                   [style.width.px]="widthFor(o)">
+                <div class="label">{{ o.data.name }} <span class="badge">{{ o.data.status }}</span></div>
+                <button class="actions" (click)="$event.stopPropagation(); openEdit(o)">•••</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-container" *ngIf="panelOpen">
+      <app-timeline-panel [mode]="panelMode" [order]="panelOrder" [workCenterId]="panelWorkCenterId"
+                          (cancel)="closePanel()" (save)="onSaveOrder($event)" (delete)="onDeleteOrder($event)"></app-timeline-panel>
+    </div>
+  </div>
+</div>
