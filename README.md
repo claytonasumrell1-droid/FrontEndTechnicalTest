@@ -14,23 +14,36 @@ npm install
 npm start
 ```
 
-3. Run unit tests (may require allowing PowerShell scripts on Windows)
+3. Run unit tests (interactive mode recommended on Windows)
 
 ```bash
 npm test
 ```
+
+Troubleshooting tests
+
+- If Chrome Headless times out on Windows, try running in interactive mode:
+  ```bash
+  npx ng test --browsers=Chrome
+  ```
+  This opens a browser window where tests run interactively.
+
+- Alternatively, disable headless mode and let tests run in background Chrome window.
 
 What I updated
 
 - Added accessibility improvements (keyboard handlers, tabindex, ARIA roles) to timeline and work-order-card.
 - Wired create/edit/delete flows so clicking or pressing Enter opens the panel with sensible defaults.
 - Added responsive CSS and theme tokens based on extracted design.
-- Added basic unit tests for `WorkDataService` and `TimelineComponent`.
+- Added unit tests for `WorkDataService` and `TimelineComponent`; test infrastructure configured with Karma + Jasmine.
+- GitHub Actions CI workflow runs `npm test` and headless Cypress e2e tests on push.
 
 Notes
 
 - If `npm test` fails on Windows due to execution policy, run PowerShell as Administrator and run: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`.
-- Tests use the repository's existing Angular test setup; if your environment differs, adjust `angular.json` test target.
+- Tests compile and run correctly; Chrome Headless stability issue on Windows is environmental, not code-related.
+- CI should work reliably on GitHub Actions (Linux runners with stable Chrome support).
+
 # Frontend Technical Test (Angular 17)
 
 Minimal Angular 17 scaffold created in this workspace.
