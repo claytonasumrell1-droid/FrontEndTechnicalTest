@@ -21,15 +21,17 @@
         <div class="day-indicator" [style.left.px]="todayLeft"></div>
 
         <div *ngFor="let c of workCenters; let i = index" class="row" [style.top.px]="i * 56">
-          <div class="row-inner" (click)="openCreate(c.docId)">
+          <div class="row-inner" role="button" tabindex="0" (click)="onRowClick($event, c.docId)" (keydown)="onRowKeydown($event, c.docId)">
             <div class="bars" style="position:relative; height:48px;">
-                  <div *ngFor="let o of getOrdersForCenter(c.docId)"
+              <div *ngFor="let o of getOrdersForCenter(c.docId)"
                    class="order-bar"
+                   role="button"
+                   tabindex="0"
+                   (keydown)="onOrderKeydown($event, o)"
                    [ngClass]="statusClass(o)"
                    [style.left.px]="leftFor(o)"
                    [style.width.px]="widthFor(o)">
-                <div class="label">{{ o.data.name }} <span class="badge">{{ o.data.status }}</span></div>
-                <button class="actions" (click)="$event.stopPropagation(); openEdit(o)">•••</button>
+                <app-work-order-card [order]="o" (edit)="openEdit(o)"></app-work-order-card>
               </div>
             </div>
           </div>

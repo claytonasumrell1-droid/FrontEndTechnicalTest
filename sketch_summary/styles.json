@@ -1,0 +1,515 @@
+{
+  "swatches": [
+    {
+      "_class": "swatch",
+      "do_objectID": "2E235E2C-0E6B-42E4-BEC9-1157B5AD9445",
+      "name": "1 - Text/text-6-disabled",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 0.92156862745098,
+        "green": 0.862745098039216,
+        "red": 0.847058823529412
+      }
+    },
+    {
+      "_class": "swatch",
+      "do_objectID": "A77C25D7-E9A2-4EFA-9C31-C81769A68E64",
+      "name": "3 - Element primary/6",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 0.686274509803922,
+        "red": 0.666666666666667
+      }
+    },
+    {
+      "_class": "swatch",
+      "do_objectID": "36BF386C-F2F9-4B39-B8A7-31750C2D35D2",
+      "name": "1 - Text utility/stroke-2",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 0.96078431372549,
+        "green": 0.945098039215686,
+        "red": 0.941176470588235
+      }
+    },
+    {
+      "_class": "swatch",
+      "do_objectID": "5145A1F1-AE1D-4D68-B131-CB0CD34931D4",
+      "name": "3 - Element primary/3",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 0.348241793465394,
+        "red": 0.338581123737374
+      }
+    },
+    {
+      "_class": "swatch",
+      "do_objectID": "52A5DB3D-463E-4F1D-B155-29C50678BEC5",
+      "name": "(1).primary.shade2",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 0.858823529411765,
+        "green": 0.250980392156863,
+        "red": 0.243137254901961
+      }
+    },
+    {
+      "_class": "swatch",
+      "do_objectID": "57ED3253-6621-4B9C-8F6B-D98546034A02",
+      "name": "1 - Text/text-4-labels",
+      "value": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 0.588235294117647,
+        "green": 0.443137254901961,
+        "red": 0.407843137254902
+      }
+    }
+  ],
+  "layerTextStyles": [
+    {
+      "_class": "sharedStyle",
+      "do_objectID": "E41D2CB0-D593-43AC-9A60-F2F03A5EBFBC",
+      "name": "Text-1/Left/Text-Primary",
+      "value": {
+        "_class": "style",
+        "do_objectID": "94E774C7-3A11-4EBC-8A2F-AE800AE42EF3",
+        "endMarkerType": 0,
+        "miterLimit": 10,
+        "startMarkerType": 0,
+        "windingRule": 1,
+        "skipCorners": true,
+        "blurs": [],
+        "borderOptions": {
+          "_class": "borderOptions",
+          "isEnabled": true,
+          "dashPattern": [],
+          "lineCapStyle": 0,
+          "lineJoinStyle": 0
+        },
+        "borders": [],
+        "colorControls": {
+          "_class": "colorControls",
+          "isEnabled": false,
+          "brightness": 0,
+          "contrast": 1,
+          "hue": 0,
+          "saturation": 1
+        },
+        "contextSettings": {
+          "_class": "graphicsContextSettings",
+          "blendMode": 0,
+          "opacity": 1,
+          "isProgressive": false
+        },
+        "fills": [],
+        "shadows": [],
+        "textStyle": {
+          "_class": "textStyle",
+          "encodedAttributes": {
+            "MSAttributedStringColorAttribute": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.16078431372549,
+              "green": 0.0352941176470588,
+              "red": 0.011764705882353
+            },
+            "paragraphStyle": {
+              "_class": "paragraphStyle",
+              "allowsDefaultTighteningForTruncation": 0,
+              "alignment": 0
+            },
+            "textStyleVerticalAlignmentKey": 0,
+            "MSAttributedStringFontAttribute": {
+              "_class": "fontDescriptor",
+              "attributes": {
+                "name": "Nunito-Regular",
+                "size": 11.25
+              }
+            }
+          },
+          "verticalAlignment": 0,
+          "skipColors": false,
+          "skipAlignment": false
+        }
+      }
+    },
+    {
+      "_class": "sharedStyle",
+      "do_objectID": "960D3204-96A5-4D9A-81D8-66FB84088B73",
+      "name": "5. H3 - 24 Style",
+      "value": {
+        "_class": "style",
+        "do_objectID": "F1DB24C8-AC89-431B-80DD-B35E731FBD9A",
+        "endMarkerType": 0,
+        "miterLimit": 10,
+        "startMarkerType": 0,
+        "windingRule": 1,
+        "skipCorners": true,
+        "blurs": [],
+        "borderOptions": {
+          "_class": "borderOptions",
+          "isEnabled": true,
+          "dashPattern": [],
+          "lineCapStyle": 0,
+          "lineJoinStyle": 0
+        },
+        "borders": [],
+        "colorControls": {
+          "_class": "colorControls",
+          "isEnabled": false,
+          "brightness": 0,
+          "contrast": 1,
+          "hue": 0,
+          "saturation": 1
+        },
+        "contextSettings": {
+          "_class": "graphicsContextSettings",
+          "blendMode": 0,
+          "opacity": 1,
+          "isProgressive": false
+        },
+        "fills": [],
+        "shadows": [],
+        "textStyle": {
+          "_class": "textStyle",
+          "encodedAttributes": {
+            "MSAttributedStringColorAttribute": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.16078431372549,
+              "green": 0.0352941176470588,
+              "red": 0.011764705882353
+            },
+            "paragraphStyle": {
+              "_class": "paragraphStyle",
+              "maximumLineHeight": 34,
+              "minimumLineHeight": 34,
+              "allowsDefaultTighteningForTruncation": 0,
+              "alignment": 0
+            },
+            "textStyleVerticalAlignmentKey": 0,
+            "MSAttributedStringFontAttribute": {
+              "_class": "fontDescriptor",
+              "attributes": {
+                "name": "CircularStd-Medium",
+                "size": 24
+              }
+            }
+          },
+          "verticalAlignment": 0,
+          "skipColors": false,
+          "skipAlignment": false
+        }
+      }
+    }
+  ],
+  "layerStyles": [
+    {
+      "_class": "sharedStyle",
+      "do_objectID": "B33E6E7D-BFD6-4E3C-8A32-C0439C4E53F1",
+      "name": "shadow/50-0.8",
+      "value": {
+        "_class": "style",
+        "do_objectID": "37D1E282-9859-49B7-9FDF-C7231659DF56",
+        "endMarkerType": 0,
+        "miterLimit": 10,
+        "startMarkerType": 0,
+        "windingRule": 1,
+        "skipCorners": true,
+        "blurs": [],
+        "borderOptions": {
+          "_class": "borderOptions",
+          "isEnabled": true,
+          "dashPattern": [],
+          "lineCapStyle": 0,
+          "lineJoinStyle": 0
+        },
+        "borders": [],
+        "colorControls": {
+          "_class": "colorControls",
+          "isEnabled": false,
+          "brightness": 0,
+          "contrast": 1,
+          "hue": 0,
+          "saturation": 1
+        },
+        "contextSettings": {
+          "_class": "graphicsContextSettings",
+          "blendMode": 0,
+          "opacity": 1,
+          "isProgressive": false
+        },
+        "fills": [],
+        "shadows": [
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": false,
+            "blurRadius": 0.8,
+            "offsetX": 0,
+            "offsetY": 1,
+            "spread": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 0.5,
+              "blue": 0,
+              "green": 0,
+              "red": 0
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "fontReferences": [
+    {
+      "_class": "fontReference",
+      "do_objectID": "06276120-B357-4969-8241-4AB896741A7D",
+      "fontData": {
+        "_class": "MSJSONFileReference",
+        "_ref_class": "MSFontData",
+        "_ref": "fonts/fd181384c40d4d501a427196379f61098a13c912"
+      },
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-Light.ttf",
+      "options": 7,
+      "postscriptNames": [
+        "Nunito-Light"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "09042607-B7D4-41BE-A839-7A21CB2450D2",
+      "fontData": {
+        "_class": "MSJSONFileReference",
+        "_ref_class": "MSFontData",
+        "_ref": "fonts/33ab3c4a7e0dacdc62058bb5ded3f13c495f5ce5"
+      },
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "Circular Std Medium.otf",
+      "options": 3,
+      "postscriptNames": [
+        "CircularStd-Medium"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "25BE8807-AC8F-4C34-8D5A-FA2A22F7DB5E",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-ExtraBold.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-ExtraBold"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "27E1805F-AE25-46FF-BFC8-352D115E52A9",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-Black.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-Black"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "2CE78268-A1BB-4BF7-8DCF-E89216D40A12",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-Bold.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-Bold"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "2EE47D7A-EC9C-4CBA-80B1-BD8C8671D30C",
+      "fontData": {
+        "_class": "MSJSONFileReference",
+        "_ref_class": "MSFontData",
+        "_ref": "fonts/57fa0fd1351f265969c0b0391f89de000e6470aa"
+      },
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "CircularStd-Regular.otf",
+      "options": 3,
+      "postscriptNames": [
+        "CircularStd-Regular"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "35F59356-BF68-4BC0-A05E-AD17232F9175",
+      "fontData": {
+        "_class": "MSJSONFileReference",
+        "_ref_class": "MSFontData",
+        "_ref": "fonts/99699c799efd281c6db60cf69e71a8018a32aa74"
+      },
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-Regular.ttf",
+      "options": 3,
+      "postscriptNames": [
+        "Nunito-Regular"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "3DADE23B-BB95-4219-AA7E-3A64A7B65432",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-ExtraLightItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-ExtraLightItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "4BDF0FE7-2B0F-4428-A12C-1D631A481319",
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "CircularStd-SemiBold.otf",
+      "options": 1,
+      "postscriptNames": [
+        "CircularStd-SemiBold"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "6ACE88F6-9578-431A-B401-738A67869E89",
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "Circular Std Black.otf",
+      "options": 1,
+      "postscriptNames": [
+        "CircularStd-Black"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "8183F741-CB0D-442F-98F6-76D4FD789E3E",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-BoldItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-BoldItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "9E74B74B-E232-4D65-8F6B-A25ADEC15AD3",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-SemiBold.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-SemiBold"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "9E83EE37-2D3B-4D87-A0ED-67979AF17B6D",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-LightItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-LightItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "A62FEDAB-E900-41ED-91E5-51F61D8B8316",
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "Circular Std Bold Italic.otf",
+      "options": 1,
+      "postscriptNames": [
+        "CircularStd-BoldItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "B794FB75-A12E-4B14-879D-715055650EF6",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-BlackItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-BlackItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "C9879FDC-90EC-4984-AAF1-540BD0760FA1",
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "Circular Std Bold.otf",
+      "options": 1,
+      "postscriptNames": [
+        "CircularStd-Bold"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "CA2F3FFC-DB04-4552-984E-8B8FC856C3B6",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-ExtraBoldItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-ExtraBoldItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "CA8B474B-5609-4AE7-ADCD-D446A441C513",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-Italic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-Italic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "CAEA4856-EBC2-414D-B562-5D4FA6AD6B4C",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-ExtraLight.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-ExtraLight"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "EA7C19CD-186E-4D85-B919-E45527E68DAA",
+      "fontFamilyName": "Nunito",
+      "fontFileName": "Nunito-SemiBoldItalic.ttf",
+      "options": 1,
+      "postscriptNames": [
+        "Nunito-SemiBoldItalic"
+      ]
+    },
+    {
+      "_class": "fontReference",
+      "do_objectID": "FBAA7006-68FD-4E78-BAB4-A14B71EC27DA",
+      "fontData": {
+        "_class": "MSJSONFileReference",
+        "_ref_class": "MSFontData",
+        "_ref": "fonts/03364de068a91d80697d4fff54e4a4932c9cf009"
+      },
+      "fontFamilyName": "Circular Std",
+      "fontFileName": "Circular Std Book.otf",
+      "options": 3,
+      "postscriptNames": [
+        "CircularStd-Book"
+      ]
+    }
+  ]
+}

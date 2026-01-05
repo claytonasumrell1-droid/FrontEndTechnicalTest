@@ -1,0 +1,7 @@
+<div class="wo-card p-2 rounded shadow-sm" role="button" tabindex="0" aria-label="Open work order" (click)="$event.stopPropagation(); edit.emit()" (keydown)="onKeydown($event)">
+  <div class="d-flex justify-content-between">
+    <div class="fw-semibold">{{ order?.data?.name }}</div>
+    <div class="small text-muted">{{ order?.data?.status }}</div>
+  </div>
+  <div class="small text-muted">{{ order?.data?.startDate }} — {{ order?.data?.endDate }}</div>
+</div>

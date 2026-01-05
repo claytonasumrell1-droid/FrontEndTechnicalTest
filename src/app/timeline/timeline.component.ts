@@ -39,8 +39,16 @@ export class TimelineComponent implements OnInit {
     this.visibleStart = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
     this.visibleEnd = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
 
-    this.data.getOrders().subscribe(o => (this.workOrders = o));
-    this.recalculateGrid();
+    this.data.getOrders().subscribe(o => {
+      this.workOrders = o;
+      this.recalculateGrid();
+    });
+
+    // subscribe to centers so the left panel and grid height render
+    this.data.getCenters().subscribe(c => {
+      this.workCenters = c;
+      this.recalculateGrid();
+    });
   }
 
   ngAfterViewInit(): void {
@@ -89,10 +97,28 @@ export class TimelineComponent implements OnInit {
 
   openCreate(workCenterId: string, dateIso?: string) {
     this.panelMode = 'create';
-    this.panelOrder = null;
     this.panelWorkCenterId = workCenterId;
+
+    // Prefill a minimal WorkOrderDocument so the panel form is populated
+    const today = dateIso ? new Date(dateIso) : new Date();
+    const startIso = today.toISOString().split('T')[0];
+    const end = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    const endIso = end.toISOString().split('T')[0];
+
+    this.panelOrder = {
+      docId: `wo-${Date.now()}`,
+      docType: 'workOrder',
+      data: {
+        name: 'New Work Order',
+        workCenterId: workCenterId,
+        status: 'open',
+        startDate: startIso,
+        endDate: endIso
+      }
+    };
+
     this.panelOpen = true;
-    // Small timeout to allow inputs to initialize if necessary
+    // allow view to initialize
     setTimeout(() => {}, 20);
   }
 
@@ -148,6 +174,49 @@ export class TimelineComponent implements OnInit {
     const container = this.rightPanel.nativeElement;
     const centerLeft = this.leftForDate(date) - container.clientWidth / 2;
     container.scrollLeft = Math.max(0, centerLeft);
+  }
+
+  // Handle clicks inside a row to compute which date was clicked and open create with that date
+  onRowClick(event: MouseEvent, workCenterId: string) {
+    // If clicking an order-bar which stops propagation, this won't run for those clicks
+    if (!this.gridInner || !this.rightPanel) {
+      this.openCreate(workCenterId);
+      return;
+    }
+
+    const gridEl = this.gridInner.nativeElement as HTMLElement;
+    const container = this.rightPanel.nativeElement as HTMLElement;
+    const rect = gridEl.getBoundingClientRect();
+    const clientX = event.clientX;
+    // account for horizontal scroll of the containing panel
+    const x = clientX - rect.left + container.scrollLeft;
+    const dayIndex = Math.floor(x / this.cellWidth);
+    const clickedDate = new Date(this.visibleStart.getTime() + dayIndex * 24 * 60 * 60 * 1000);
+    const iso = clickedDate.toISOString().split('T')[0];
+    this.openCreate(workCenterId, iso);
+  }
+
+  onRowKeydown(event: KeyboardEvent, workCenterId: string) {
+    const k = event.key;
+    if (k === 'Enter' || k === ' ') {
+      event.preventDefault();
+      // open create with today's date when using keyboard
+      const todayIso = new Date().toISOString().split('T')[0];
+      this.openCreate(workCenterId, todayIso);
+    }
+  }
+
+  onOrderKeydown(event: KeyboardEvent, order: WorkOrderDocument) {
+    const k = event.key;
+    if (k === 'Enter' || k === ' ') {
+      event.preventDefault();
+      this.openEdit(order);
+    } else if (k === 'Delete') {
+      event.preventDefault();
+      if (confirm('Delete this work order?')) {
+        this.onDeleteOrder(order.docId);
+      }
+    }
   }
 
   // Simple status class

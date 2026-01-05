@@ -5,3 +5,65 @@ body {
   margin: 0;
   padding: 16px;
 }
+
+/* Theme variables (from sketch swatches) */
+:root {
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --text-primary: #281007;
+  --text-disabled: #D8DCEB; /* from swatch 1 */
+  --primary-6: #AAAFFF; /* from swatch 2 */
+  --stroke-2: #F0F1F5; /* from swatch 3 */
+  --primary-3: #5658FF; /* from swatch 4 */
+  --primary-shade2: #3E40DB; /* from swatch 5 */
+  --text-label: #687196; /* from swatch 6 */
+  --primary: var(--primary-6);
+  --primary-strong: var(--primary-shade2);
+}
+
+/* Custom fonts from extracted sketch assets */
+@font-face {
+  font-family: 'Nunito';
+  src: url('/assets/sketch/fonts/99699c799efd281c6db60cf69e71a8018a32aa74') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/assets/sketch/fonts/fd181384c40d4d501a427196379f61098a13c912') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Circular Std';
+  src: url('/assets/sketch/fonts/33ab3c4a7e0dacdc62058bb5ded3f13c495f5ce5') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Prefer extracted fonts where available */
+body {
+  font-family: 'Nunito', 'Circular Std', Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+/* Small utilities */
+.badge {
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .left-panel { width: 72px; }
+  .left-panel li { font-size: 0.85rem; padding: 10px; }
+  .timeline-root { flex-direction: column; }
+  .right-panel { padding: 6px; }
+}

@@ -1,0 +1,10 @@
+<div class="right-panel" [class.open]="open">
+  <div class="p-3">
+    <button class="btn btn-sm btn-light mb-2" (click)="close.emit()">Close</button>
+    <div *ngIf="order">
+      <h5>{{ order.data.name }}</h5>
+      <p class="small text-muted">{{ order.data.startDate }} — {{ order.data.endDate }}</p>
+    </div>
+    <div *ngIf="!order">Select an order or create new.</div>
+  </div>
+</div>
