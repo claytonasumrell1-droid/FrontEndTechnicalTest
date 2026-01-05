@@ -6,6 +6,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-jasmine-html-reporter'),
       require('karma-chrome-launcher'),
+      require('karma-firefox-launcher'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
@@ -20,11 +21,12 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress'],
     port: 9876,
-    browserDisconnectTimeout: 10000,
+    browserDisconnectTimeout: 15000,
     browserDisconnectTolerance: 3,
-    browserNoActivityTimeout: 30000,
+    browserNoActivityTimeout: 120000,
+    captureTimeout: 120000,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
