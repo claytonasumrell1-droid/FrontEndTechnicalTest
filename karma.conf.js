@@ -2,6 +2,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    tempDir: require('path').join(__dirname, 'tmp', 'karma'),
     plugins: [
       require('karma-jasmine'),
       require('karma-jasmine-html-reporter'),
@@ -23,14 +24,26 @@ module.exports = function (config) {
     },
     reporters: ['progress'],
     port: 9876,
-    browserDisconnectTimeout: 15000,
+    browserDisconnectTimeout: 20000,
     browserDisconnectTolerance: 3,
-    browserNoActivityTimeout: 120000,
-    captureTimeout: 120000,
+    browserNoActivityTimeout: 180000,
+    captureTimeout: 180000,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeHeadlessCustom'],
+    customLaunchers: {
+      ChromeHeadlessCustom: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--headless=new',
+          '--disable-gpu',
+          '--disable-dev-shm-usage',
+          '--no-sandbox',
+          '--remote-allow-origins=*'
+        ]
+      }
+    },
     singleRun: true,
     restartOnFileChange: false
   });

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --browsers=ChromeHeadlessCustom --watch=false",
     "lint": "ng lint",
     "e2e": "cypress open",
     "e2e:run": "cypress run"
